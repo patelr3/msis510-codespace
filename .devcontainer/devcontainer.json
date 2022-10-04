@@ -40,15 +40,15 @@
 	},
 
 	"features": {
-		"common": {
-			"username": "automatic",
-			"uid": "automatic",
-			"gid": "automatic",
-			"installZsh": true,
-			"installOhMyZsh": true,
-			"upgradePackages": true,
-			"nonFreePackages": false
-		},
+		// "common": {
+		// 	"username": "automatic",
+		// 	"uid": "automatic",
+		// 	"gid": "automatic",
+		// 	"installZsh": true,
+		// 	"installOhMyZsh": true,
+		// 	"upgradePackages": true,
+		// 	"nonFreePackages": false
+		// },
 		"git": "os-provided"
 	},
 

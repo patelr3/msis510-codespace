@@ -7,7 +7,7 @@ FROM ${BASE_IMAGE}:${VARIANT}
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
 # [Option] Upgrade OS packages to their latest versions
-ARG UPGRADE_PACKAGES="false"
+ARG UPGRADE_PACKAGES="true"
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies.
 ARG USERNAME=rstudio
@@ -60,9 +60,9 @@ RUN if [ "${ENABLE_JUPYTER}" = "true" ]; then \
     fi
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update \
-#     && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends vim
 
 # [Optional] Uncomment this section to install additional R packages.
 # RUN install2.r --error --skipinstalled --ncpus -1 <your-package-list-here>
