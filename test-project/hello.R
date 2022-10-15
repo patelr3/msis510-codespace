@@ -9,4 +9,6 @@ say_hello <- function(name) {
   message(paste0("Hello, ", name, "!"))
 }
 
+install.packages("ggplot2")
+
 say_hello("remote world")
